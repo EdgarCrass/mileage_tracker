@@ -1,19 +1,9 @@
 <!-- create a form that can be used by both the new and edit actions -->
 
-<% # start form here %>
-  <% if @make.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@make.errors.count, "error") %> prohibited this make from being saved:</h2>
-
-      <ul>
-      <% @make.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= simple_form_for @make do |f| %>
+<%= f.input :name %>
+<%= f.submit %>
 <!-- fill in the rest of the form here -->
 
-<% #end the form here  %>
+<% end #the form here  %>
 
