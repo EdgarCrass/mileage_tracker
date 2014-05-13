@@ -1,17 +1,10 @@
 <!-- create a form that can be used by both the new and edit actions -->
 
 <% # start form here %>
-  <% if @model.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@model.errors.count, "error") %> prohibited this model from being saved:</h2>
-
-      <ul>
-      <% @model.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= simple_form_for @model  do |f| %>
+<%= f.input :name %>
+<%= f.submit %>
+<% end %>
 
 <!-- fill in the rest of the form here -->
 

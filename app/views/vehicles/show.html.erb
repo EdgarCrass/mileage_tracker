@@ -22,6 +22,8 @@
 </div>
 <div>
 <!-- insert the mileage form here -->
+	
+	<%= render 'mileages/form' %>
 
 </div>
 <div style="clear:both;">
@@ -30,10 +32,17 @@
 <table>
   <tr>
     <td>Date Filled</td>
-    <td>Miles</td>
-    <td>Gallons</td>
+	<td>Miles</td>
+	<td>Gallons</td>	
   </tr>
 <!-- display the mileages here. You do not need to use a partial -->
+  <% @mileages.each do |mileage| %>
+    <tr>
+      <td><%= mileage.filled_tank_on %></td>
+      <td><%= mileage.miles %></td>
+      <td><%= mileage.gallons %></td>
+    </tr>
+  <% end %>
 </table>
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |

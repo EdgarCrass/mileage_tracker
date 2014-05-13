@@ -1,9 +1,12 @@
 <!-- create a form that can be used by both the new and edit actions -->
 
-<%= simple_form_for @make do |f| %>
-<%= f.input :name %>
-<%= f.submit %>
+<% # start form here %>
+  <%= simple_form_for @make  do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
+  <% end %>
+
 <!-- fill in the rest of the form here -->
 
-<% end #the form here  %>
+<% #end the form here  %>
 

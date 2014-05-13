@@ -5,12 +5,11 @@
     <th>Name</th>
   </tr>
 
-<!-- display the list of models here
-     you do not need to use a partial -->
+<%= render @models %>
 
 </table>
 
 <br />
 
-<% # create a link the "new" model page %>
+<%= link_to "New", new_model_path %>
 

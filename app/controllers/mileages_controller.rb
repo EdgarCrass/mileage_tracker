@@ -4,11 +4,13 @@ class MileagesController < ApplicationController
   end
 
   def show
+    @mileage = Mileage.find params[:id]
   end
 
   def new
     @mileage = Mileage.new
     @vehicles = Vehicle.all
+    
   end
 
   def create
